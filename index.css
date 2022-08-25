@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+/* ========== 
+ TYPOGRAPHY
+ ========== */
+h1 {
+  font-weight: 300;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  letter-spacing: 0.166667px;
+  color: #4d4f62;
+  margin-bottom: 16px;
+}
+
+h1 span.bold {
+  font-weight: 600;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.875;
+  color: #4d4f62;
+  margin-bottom: 1px;
+}
+
+p.p-main {
+  font-weight: 400;
+  font-size: 0.938rem;
+  line-height: 1.563rem;
+  letter-spacing: 0.104167px;
+  color: #4d4f62;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  margin-bottom: 33px;
+}
+
+p.p-card {
+  font-weight: 400;
+  font-size: 0.813rem;
+  line-height: 1.438rem;
+  letter-spacing: 0.0902778px;
+  color: #4d4f62;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  margin-bottom: 33px;
+}
+
+/* ========== 
+ LAYOUT
+ ========== */
+.container {
+  width: 82.9333%;
+  margin: 0 auto;
+  padding-top: 85px;
+}
+
+main {
+  text-align: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 222px;
+  padding: 27px 28px 28px 29px;
+  background: #fff;
+  box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
+  border-radius: 8px;
+  margin-bottom: 35px;
+  position: relative;
+  transition: ease-out 0.3s;
+}
+
+.card:hover {
+  transition: ease-in 0.3s;
+
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 57px;
+  align-self: flex-end;
+}
+
+.card::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 4px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  top: 4px;
+  left: 0;
+  transition: ease-out 0.3s;
+}
+
+.card-1::after {
+  background: #44d3d2;
+}
+
+.card-2::after {
+  background: #ea5454;
+}
+
+.card-3::after {
+  background: #fcae4a;
+}
+
+.card-4::after {
+  background: #549ef2;
+}
+
+.card:hover:after {
+  transition: ease-in 0.3s;
+  height: 8px;
+}
+
+/* ========== 
+ MEDIA QUERIES
+ ========== */
+@media (min-width: 600px) {
+  .container {
+    width: 60%;
+  }
+}
+
+@media (min-width: 900px) {
+  /* ========== 
+ TYPOGRAPHY
+ ========== */
+  h1 {
+    font-size: 2.25rem;
+    line-height: 3.375rem;
+    letter-spacing: 0.25px;
+    margin-bottom: 13px;
+  }
+
+  h2 {
+    margin-bottom: 6px;
+  }
+
+  p.p-main {
+    margin-bottom: 64px;
+    max-width: 540px;
+    margin: 0 auto 64px auto;
+  }
+
+  p.p-card {
+    margin-bottom: 40px;
+  }
+
+  /* ========== 
+ LAYOUT
+ ========== */
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 80px;
+  }
+
+  .cards-container {
+    width: 77.08333%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 31.8181%);
+    grid-column-gap: 30px;
+    align-items: center;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    padding: 32px;
+    padding-bottom: 0;
+    position: relative;
+  }
+
+  .card:hover {
+    transition: ease-in 0.3s;
+    transform: scale(1.05);
+    box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.8);
+  }
+
+  .card img {
+    width: 18.2857%;
+    max-width: 64px;
+    position: absolute;
+    top: 61.6%;
+    right: 9.1429%;
+  }
+
+  .card-1:hover {
+    transform: translateX(-10px);
+  }
+
+  .card-2:hover {
+    transform: translateY(-10px);
+  }
+
+  .card-3:hover {
+    transform: translateY(10px);
+  }
+
+  .card-4:hover {
+    transform: translateX(10px);
+  }
+}
